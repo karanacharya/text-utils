@@ -10,13 +10,13 @@ export default function Navbar(props) {
       <nav
         className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} font-weight-bold`}
       >
-        <a
+        <Link
           className={`navbar-brand text-${ props.mode === "light" ? "dark" : "light"}`}
           
-          href="/"
+          to="/"
         >       
           <h4>{props.title}</h4>
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -32,15 +32,15 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className={`nav-link text-${ props.mode === "light" ? "dark" : "light"}`}
-               href="/">
+              <Link className={`nav-link text-${ props.mode === "light" ? "dark" : "light"}`}
+               to="/">
                 Home <span className="sr-only">(current)</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className={`nav-link text-${ props.mode === "light" ? "dark" : "light"}`} href="/about">
+              <Link className={`nav-link text-${ props.mode === "light" ? "dark" : "light"}`} to="/about">
                 About
-              </a>
+              </Link>
             </li>
           </ul>
           <div

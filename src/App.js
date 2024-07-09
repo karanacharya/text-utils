@@ -4,13 +4,13 @@ import Navbar from './components/Navbar';
 import Textform from './components/textform';
 import React, { useState } from 'react'
 import Alert from './components/Alert';
-// import About from './components/About';
-// import {
-// BrowserRouter as Router,
-// Switch,
-//   Route,
-//   Link
-// } from 'react-router-dom';
+import About from './components/About';
+import {
+BrowserRouter as Router,
+Switch,
+  Route,
+  Link
+} from 'react-router-dom';
 
 
 function App() {
@@ -55,20 +55,20 @@ function App() {
 
   return (
     <>
-      {/* <Router>   */}
+      <Router>  
         <Navbar title="karan" mode={mode} togglemode={toggleMode} chgbcolor={chgbcolor} />
         <Alert alert={alert} />
         <div className="container my-3" >
-          {/* <Switch> */}
-            {/* <Route exact path="/about"> */}
-              {/* <About /> */}
-            {/* </Route> */}
-            {/* <Route exact path="/"> */}
+          <Switch>
+            <Route exact path="/about">
+              <About mode={mode} />
+            </Route>
+            <Route exact path="/">
               <Textform showalert={showAlert} heading="Enter your text here" mode={mode} />
-            {/* </Route> */}
-          {/* </Switch> */}
+            </Route>
+          </Switch>
         </div>
-      {/* // </Router> */}
+       </Router>
 
 
     </>

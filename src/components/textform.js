@@ -51,7 +51,7 @@ export default function Textform(props) {
             ></textarea>
             <button
               type="button"
-              className="btn btn-primary my-3"
+              className="btn btn-primary my-3 ml-5"
               onClick={handleUPclick}
             >
               Convert to Uppercase
@@ -84,7 +84,7 @@ export default function Textform(props) {
        style={{color: props.mode==='#322f45'?'white':'black'}}>
         <h2>This is your text summary</h2>
         <p>
-          {Text.split(" ").length} words and {Text.length} characters
+          {Text.split(" ").filter((element)=>{return element.length!==0}).length} words and {Text.length} characters
         </p>
         <p>
           The above text can be read in {0.008 * Text.split(" ").length} Minutes
